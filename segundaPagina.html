@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario</h2>
+    
+    <fieldset><!--agrupar en un contenedor-->
+        <legend>Datos usuario</legend> <!--titulo del contenedor-->
+
+        <form action="myScript.php" method="">
+
+            <label for="Name">Nombre:</label><br>
+            <input type="text" id="Name" name="Name" placeholder="ingresa tu nombre" required="completa este campo" autofocus><br>
+
+            <label type="email">Correo:</label><br>
+            <input type="email" id="email" name="email"  required="completa este campo" ><br>
+
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" id="pass" name="pass"  required="completa este campo"><br>
+
+            <label for="date">Fecha</label><br>
+            <input type="date" id="date" name="date"><br>
+
+            <!--para ingresar un archivo-->
+            <label for="file">Insertar archivo:</label><br>
+            <input type="file" id="file" name="file" ><br>
+            
+            <!--cuando el usuario desee ingresar una descripcion mucho mas larga-->
+            <textarea name="Description" id="descripcion" cols="50" rows="30" placeholder="agregar descripcion"></textarea>
+
+        </fieldset>
+    
+        <fieldset>
+            <legend>color favoritos</legend>
+           <!--en este tipo de entrada se le asigna un valor diferente a cada uno para poder enivar informacion al servidor-->
+            <input type="radio" id="red" name="color" value="red">
+            <label for="red">Rojo</label><br>
+
+            <input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Azul</label><br>
+
+            <input type="radio" id="green" name="color" value="green">
+            <label for="green">verde</label><br>
+
+            <!--tipo de entrada color, es necesario tener en cuenta el name-->
+            <input type="color" name="color"><br>
+
+            <!--cuando el usuario tiene la opcion de seleccionar alguna accion EN FORMA DE LISTA-->
+            <select name="color2" id="color2">
+                <option value="blue">azul</option>
+                <option value="red">rojo</option>
+                <option value="green">verde</option>
+            </select>
+
+        </fieldset> 
+
+        <fieldset>
+            <legend>Hobbies</legend>
+            <!--permite al usuario seleccionar uno o varias acciones-->
+            <input type="checkbox" id="read" name="hobi1" value="read">
+            <label for="read">Leer:</label><br>
+
+            <input type="checkbox" id="dance" name="hobi2" value="dance">
+            <label for="dance">Bailar</label><br>
+
+            <input type="checkbox" id="coding" name="hobi3" value="coding">
+            <label for="coding">Programar</label>
+        </fieldset><br>
+
+        <!--enviar informacion-->
+        <input type="submit" value="enviar">
+
+       <!--borrar-->
+       <input type="reset" value="borrar">
+
+        </form>
+        <h2>AUDIO Y VIDEO</h2>
+        <video src="video/1,23d.mov" autoplay controls loop> el navegador no puede reproducir el video </video>
+
+        <video controls autoplay loop>
+            <source  src="video/1,23d.mov" type="video/mov" >
+            <source src="video/1,23d.mov" type="video/mp4">
+            el navegador no puede reproducir el video 
+        </video>
+
+        <!--VIDEO DE YOUTUBE-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/akFzU5K8VL0?si=Y2F5OdpewbGIz4Z1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        
+    
+</body>
+</html>
